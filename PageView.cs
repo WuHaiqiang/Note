@@ -102,7 +102,6 @@ public class PageView : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         }
 
         SetPageIndex(index);
-
         targethorizontal = posList[index]; //设置当前坐标，更新函数进行插值  
         isDrag = false;
         startTime = 0;
