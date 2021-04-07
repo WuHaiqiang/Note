@@ -57,3 +57,41 @@ public class Person_1
         return this.op.GetResult();
     }
 }
+public abstract class Operation
+{
+    public float numA;
+    public float numB;
+
+    public abstract float GetResult();
+}
+public class AddFun : Operation
+{
+    public override float GetResult()
+    {
+        return numA + numB;
+    }
+}
+public class SubtractionFun : Operation
+{
+    public override float GetResult()
+    {
+        return numA - numB;
+    }
+}
+public class MultiplicationFun : Operation
+{
+    public override float GetResult()
+    {
+        return numA * numB;
+    }
+}
+public class DivisionFun : Operation
+{
+    public override float GetResult()
+    {
+        if (numB != 0)
+            return numA / numB;
+        else
+            return 0;
+    }
+}
